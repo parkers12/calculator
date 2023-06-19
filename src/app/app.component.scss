@@ -1,0 +1,329 @@
+.wrapper {
+  height: 100%;
+  background-color: #1E1E1E;
+
+  .calc {
+    width: 360px;
+    height: 690px;
+
+    &__view {
+      width: 100%;
+      height: 240px;
+      padding: 24px 24px 48px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      .button {
+        width: 90px;
+        height: 90px;
+        color: white;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 90px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+
+    .current-expression {
+      width: 100%;
+      text-align: right;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 400;
+      overflow: hidden;
+    }
+
+
+    .template {
+      display: flex;
+      justify-content: space-around;
+
+      &__item {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        //border: 1px solid #fff;
+
+        &.dark {
+          background: linear-gradient(174.22deg, #313131 0%, rgba(18, 18, 18, 0) 95.4%);
+        }
+
+        &.violet {
+          background: linear-gradient(168.55deg, #BD71C0 0%, #3A243C 100%);
+        }
+
+        &.green {
+          background: linear-gradient(168.55deg, #71C09F 0%, #27434B 100%);
+        }
+
+        &.blue {
+          background: linear-gradient(168.55deg, #7973C5 0%, #221E3C 100%);
+        }
+
+        &.grey {
+          background: linear-gradient(168.55deg, #C9C9C9 0%, #3D3D3D 100%);
+        }
+
+        &.red {
+          background: linear-gradient(168.55deg, #FFA5A5 0%, #893E3E 100%);
+        }
+
+        &.yellow {
+          background: linear-gradient(168.55deg, #DFC158 0%, #948C42 100%);
+        }
+      }
+    }
+
+    .result {
+      width: 100%;
+      font-size: 64px;
+      line-height: 75px;
+      font-weight: 500;
+      color: white;
+      background-color: transparent;
+      text-align: right;
+      outline: none;
+      border: 0;
+      overflow: hidden;
+    }
+
+    &.dark {
+      background: linear-gradient(174.22deg, #313131 0%, rgba(18, 18, 18, 0) 95.4%);
+
+      .current-expression {
+        color: #8C8C8C;
+      }
+
+      .calc__buttons {
+        .button {
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+          }
+
+          &:nth-child(-n+4) {
+            border-top: 1px solid #E7D74A;
+          }
+
+          &:nth-child(4n) {
+            border-left: 1px solid #E7D74A;
+            color: #E7D74A;
+          }
+
+          &:last-child {
+            background-color: #E7D74A;
+            color: #fff;
+
+            &:hover {
+              background-color: rgba(225, 204, 79, 95);
+            }
+          }
+        }
+      }
+    }
+    &.violet {
+      background: linear-gradient(168.55deg, #BD71C0 0%, #3A243C 100%);
+
+      .current-expression {
+        color: #FBACFF;
+      }
+
+      .calc__buttons {
+        .button {
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+          }
+
+          &:nth-child(-n+4) {
+            border-top: 1px solid #BB70BF;
+          }
+
+          &:nth-child(4n) {
+            border-left: 1px solid #BB70BF;
+            color: #BB70BF;
+          }
+
+          &:last-child {
+            background-color: #BB70BF;
+            color: #fff;
+
+            &:hover {
+              background-color: rgba(171, 79, 176, 95);
+            }
+          }
+        }
+      }
+    }
+    &.green {
+      background: linear-gradient(168.55deg, #71C09F 0%, #27434B 100%);
+
+      .current-expression {
+        color: #ACFAFF;
+      }
+
+      .calc__buttons {
+        .button {
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+          }
+
+          &:nth-child(-n+4) {
+            border-top: 1px solid #70BE9D;
+          }
+
+          &:nth-child(4n) {
+            border-left: 1px solid #70BE9D;
+            color: #70BE9D;
+          }
+
+          &:last-child {
+            background-color: #70BE9D;
+            color: #fff;
+
+            &:hover {
+              background-color: rgba(79, 176, 136, 95);
+            }
+          }
+        }
+      }
+    }
+    &.blue {
+      background: linear-gradient(168.55deg, #7973C5 0%, #221E3C 100%);
+
+      .current-expression {
+        color: #B8ACFF;
+      }
+
+      .calc__buttons {
+        .button {
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+          }
+
+          &:nth-child(-n+4) {
+            border-top: 1px solid #7871C3;
+          }
+
+          &:nth-child(4n) {
+            border-left: 1px solid #7871C3;
+            color: #7871C3;
+          }
+
+          &:last-child {
+            background-color: #7871C3;
+            color: #fff;
+
+            &:hover {
+              background-color: rgba(85, 77, 179, 95);
+            }
+          }
+        }
+      }
+    }
+    &.grey {
+      background: linear-gradient(168.55deg, #C9C9C9 0%, #3D3D3D 100%);
+
+      .current-expression {
+        color: #DBDBDB;
+      }
+
+      .calc__buttons {
+        .button {
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+          }
+
+          &:nth-child(-n+4) {
+            border-top: 1px solid #2B2B2B;
+          }
+
+          &:nth-child(4n) {
+            border-left: 1px solid #2B2B2B;
+            color: #2B2B2B;
+          }
+
+          &:last-child {
+            background-color: #2B2B2B;
+            color: #fff;
+
+            &:hover {
+              background-color: rgba(18, 18, 18, 95);
+            }
+          }
+        }
+      }
+    }
+    &.red {
+      background: linear-gradient(168.55deg, #FFA5A5 0%, #893E3E 100%);
+
+      .current-expression {
+        color: #FFACAC;
+      }
+
+      .calc__buttons {
+        .button {
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+          }
+
+          &:nth-child(-n+4) {
+            border-top: 1px solid #FCA2A2;
+          }
+
+          &:nth-child(4n) {
+            border-left: 1px solid #FCA2A2;
+            color: #FCA2A2;
+          }
+
+          &:last-child {
+            background-color: #FCA2A2;
+            color: #fff;
+
+            &:hover {
+              background-color: rgba(252, 111, 111, 95);
+            }
+          }
+        }
+      }
+    }
+    &.yellow {
+      background: linear-gradient(168.55deg, #DFC158 0%, #948C42 100%);
+
+      .current-expression {
+        color: #FFF7AC;
+      }
+
+      .calc__buttons {
+        .button {
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+          }
+
+          &:nth-child(-n+4) {
+            border-top: 1px solid #665F22;
+          }
+
+          &:nth-child(4n) {
+            border-left: 1px solid #665F22;
+            color: #665F22;
+          }
+
+          &:last-child {
+            background-color: #665F22;
+            color: #fff;
+
+            &:hover {
+              background-color: rgba(66, 62, 22, 95);
+            }
+          }
+        }
+      }
+    }
+  }
+}
