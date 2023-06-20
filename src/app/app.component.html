@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="calc {{ templateCalc }}">
+    <div class="calc__view">
+      <div class="template">
+        <div *ngFor="let template of templateList"
+           class="template__item {{ template }}"
+           (click)="changeTemplate(template)"></div>
+      </div>
+      <div class="current-expression">
+        {{ expression }}
+      </div>
+      <div class="result">
+        {{ result }}
+      </div>
+    </div>
+    <div class="calc__buttons">
+      <ng-container *ngFor="let button of buttons">
+        <div (click)="getValue(button.name)"
+             [innerHTML]="button.name"
+             class="button"
+        [title]="button.alt"></div>
+      </ng-container>
+    </div>
+  </div>
+</div>
